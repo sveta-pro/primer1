@@ -4,19 +4,33 @@
 <meta charset="utf-8">
 <title>index</title>
 <link href="style.css" rel="stylesheet" type="text/css">
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
-<div class ="button1"><input type="button" value="Скрывает окно " onclick="fun1()"/></div>
+<div class ="button1"><input type="button" value="Скрывает окно" /></div>
 <div id="res1"><div align="left" class ="result1">
 <p> Результат 1 </p>
 <img src="javascript_call.png" width="284" height="224" alt=""/></div>
 </div>
-<div class ="button2"><input type="button" value="Анимация-тряска" onclick="shake(res1)" /></div>
+<div class ="button2"><input type="button" value="Анимация-тряска"/></div>
 <div align="right" class ="result2">
 <p> Результат 2 </p>
 <img src="imgpreview.jpg" width="231" height="173" alt="">
 </div>
+<script>
+$(function() {
+ 
+ $( ".button2" ).click(function(){
+    $( "#res1" ).effect( "shake" );
+ });
+ 
+  $( ".button1" ).click(function(){
+    $( "#res1" ).hide();
+ });
+    
+});
+
+</script>
 </body>
 </html>
